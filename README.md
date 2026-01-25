@@ -5,6 +5,8 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
 
+**NOTE: The Streamlet app is not currently operational. Please contact the team on MapAction slack for more information.**
+
 This repository contains a Streamlit app that enables users to extract population information (aggregated and disaggregated by age and gender) for specific areas defined by shapefiles.
 
 The population information is retrieved from <a href='https://www.worldpop.org/'>WorldPop</a>, an open-access data repository that focuses on generating and providing detailed population data for different regions and countries around the world. The aim of WorldPop is to improve our understanding of human population dynamics and their interactions with social, economic, and environmental factors. The organization utilizes various sources of data, including census records, satellite imagery, household surveys, and other demographic information, to estimate population distribution and demographic characteristics at high spatial resolutions. WorldPop employs advanced spatial modeling techniques and statistical methods to generate population estimates at fine-scale resolutions (100 meters in this case).
