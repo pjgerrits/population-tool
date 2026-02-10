@@ -453,7 +453,16 @@ def aggregate_raster_on_geometries(
                         raise
     else:
         raise ValueError(f"Library {library} not known.")
-    return [int(round(s, -rounding_to_which_power_of_ten)) for s in stats_list]
+    cleaned_stats = []
+    for s in stats:
+        # Check if value is None, Infinity, or NaN (Not a Number)
+        if s is None or math.isinf(s) or math.isnan(s):
+            cleaned_stats.append(0) # Treat invalid data as 0 population
+        else:
+            cleaned_stats.append(int(round(s, -rounding_to_which_power_of_ten)))
+            
+    return cleaned_stats
+    # -------------------------------------
 
 
 def find_intersections_polygon(
